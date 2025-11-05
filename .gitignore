@@ -1,0 +1,15 @@
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.gradle/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+build/
+
+# Mac system files
+.DS_Store
+
+# Kotlin and Compose cache
+.kotlinc/

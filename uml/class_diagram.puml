@@ -1,0 +1,20 @@
+@startuml
+class AnalyzerViewModel {
+  - code: TextFieldValue
+  - results: List<AnalysisItem>
+  + analyze(): void
+}
+
+class AnalysisItem {
+  + title: String
+  + explanation: String
+  + fix: String
+}
+
+class HomeScreen
+class ResultsScreen
+
+AnalyzerViewModel "1" --> "*" AnalysisItem
+HomeScreen --> AnalyzerViewModel
+ResultsScreen --> AnalyzerViewModel
+@enduml
