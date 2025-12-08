@@ -1,24 +1,16 @@
 **Code Sensei**
 
-Code Sensei is an Android app that helps beginners understand common Kotlin coding mistakes.
-The user pastes code, presses Analyze, and the app shows clear explanations of what is wrong and how to fix it.
-
-It is built using **Kotlin**, **Jetpack Compose**, **Room Database**, **DataStore**, and **ViewModel**.
+Code Sensei is an Android app that helps beginners understand their Kotlin code more clearly.  
+The user pastes code, taps Analyze, and the app explains what is happening, what might be wrong, and how it can be improved.  
+The goal is to make learning less confusing and help students build confidence while writing simple programs.
 
 
 
 **Purpose of the Project**
 
-The purpose of Code Sensei is to teach basic debugging skills.
-It helps new programmers notice common mistakes, understand why errors happen, and learn how to correct them.
-
-This project demonstrates skills from CSC 371, including:
-- Kotlin and Android Studio
-- Jetpack Compose user interfaces
-- Navigation between screens
-- Persistent storage with Room
-- App preferences with DataStore
-- ViewModel and state management
+This project focuses on creating a beginner-friendly coding companion.  
+It guides new programmers by showing clear messages instead of overwhelming errors, and it organizes everything into a clean, easy layout that is simple to navigate.  
+The app includes helpful screens for analyzing code, reviewing past attempts, adjusting the appearance, and seeing progress.
 
 
 
@@ -26,72 +18,73 @@ This project demonstrates skills from CSC 371, including:
 
 **Code analysis**
 
-The app checks the user’s Kotlin code for many common mistakes, such as:
-- Spelling mistakes in function names or keywords
-- Missing `fun main()`
-- Unmatched parentheses or braces
-- Using `print` or `println` without parentheses
-- Using variables or functions that are not declared
-- Assigning values without `val` or `var`
-- Incorrect function declarations (for example `fun main {`)
-- Suspicious characters such as `///`
-- Some simple MaterialTheme usage problems
+The app reviews the user’s Kotlin code and points out things such as:
+- Missing or incomplete function declarations  
+- Mismatched symbols like parentheses or braces  
+- Mistyped keywords  
+- Incorrect main function structure  
+- Undefined variables or functions  
+- General formatting or structure issues  
 
-For each issue, the app shows:
-- A short title
-- A clear explanation
-- A suggestion for how to fix it
-
-The analyzer is simple and safe. It does not crash even if the user types nonsense.
+Each finding includes a short description and a clear explanation so beginners understand what to fix.
 
 
 
-**History (Room database)**
+**Error detail view**
 
-- Every time the user runs an analysis, a record is saved in the database.
-- The History screen shows a list of past analysis sessions.
-- Room and Kotlin Flow are used so the list updates automatically.
-
-
-
-**Settings (DataStore)**
-
-- The user can switch between light mode and dark mode.
-- The theme choice is saved using DataStore.
-- When the app is opened again, it remembers the previous theme.
-- DataStore is used instead of SharedPreferences because it is the modern, recommended option.
+Tapping on a specific issue opens a detailed page.  
+This view breaks the problem down step by step, helping the user understand the mistake and how to correct it.
 
 
 
-**User Interface (Jetpack Compose)**
+**Progress history**
 
-The app uses Jetpack Compose with Material 3.
-It has four main screens:
+Every analysis attempt is saved and displayed in a History screen.  
+This helps users see how their understanding improves over time and lets them review past work whenever they want.
 
-- **Home screen** – paste code, run analysis, open history, open settings
-- **Results screen** – shows detected issues, explanations, and fixes
-- **History screen** – shows saved analysis sessions from Room
-- **Settings screen** – theme switch stored using DataStore
+
+
+**Appearance settings**
+
+The app includes a simple settings page where users can choose the visual style they prefer.  
+The chosen appearance stays the same the next time the app is opened.
+
+
+
+**Rewards and levels**
+
+To make learning more encouraging, the app keeps track of points earned from each analysis.  
+These points determine the user’s level, which appears in the settings page as a small motivational feature.
+
+
+
+**User Interface**
+
+The layout is built with a clean structure and modern components.  
+There are four main screens:
+
+- **Home screen** – enter code and start analysis  
+- **Results screen** – see explanations for each issue  
+- **History screen** – view previous analysis attempts  
+- **Settings screen** – adjust appearance and see progress  
+- **Error detail screen** – deeper explanation of a single issue  
+
+The home screen uses themed background images with a frosted-glass effect to keep the text readable while still looking polished.
+
+
+
+**Splash Screen**
+
+When the app starts, a custom splash screen appears briefly with the Code Sensei logo before transitioning smoothly to the home screen.
 
 
 
 **App Flow**
 
-Home → Results → back to Home  
-Home → History → back to Home  
-Home → Settings → back to Home
-
-
-
-**Technology Used**
-
-- Kotlin
-- Jetpack Compose (Material 3)
-- ViewModel
-- Navigation-Compose
-- Room Database
-- DataStore Preferences
-- Coroutines
+Home → Results → Error Detail → Back  
+Home → History → Back  
+Home → Settings → Back  
+App Icon → Splash Screen → Home
 
 
 
@@ -99,49 +92,51 @@ Home → Settings → back to Home
 
 com.example.codesensei  
 - data  
-  - settings  (DataStore files)  
+  - settings (stores simple app preferences and points)  
 - local  
-  - AnalysisSessionEntity  
-  - AnalysisSessionDao  
-  - CodeSenseiDatabase  
+  - database files for saving history  
 - ui  
   - navigation  
   - theme  
 - HomeScreen.kt  
 - ResultsScreen.kt  
+- ErrorDetailScreen.kt  
 - HistoryScreen.kt  
 - SettingsScreen.kt  
 - AnalyzerViewModel.kt  
 - MainActivity.kt  
+- SplashActivity.kt  
 
 
 
 **How to Run the App**
 
-1. Clone the repository.
-2. Open the project in Android Studio.
-3. Let Gradle sync.
-4. Run the app on an emulator or device (API level 24 or higher).
+1. Clone the repository.  
+2. Open it in Android Studio.  
+3. Allow the project to sync.  
+4. Run on a device or emulator (Android 7.0 or above).  
 
 
 
 **Screenshots (coming soon)**
 
-- Home screen
-- Results screen
-- History screen
-- Settings screen
-- Dark mode example
-- Example of error detection
+- Splash screen  
+- Home screen  
+- Results screen  
+- Detail screen  
+- History  
+- Settings  
+- Dark and light themes  
 
 
 
-**Future Improvements**
+**Future Enhancements**
 
-- Support more programming languages
-- Add more advanced analysis rules
-- Offer automatic fixes for simple mistakes
-- Allow the user to export the analysis history
+- Support for additional languages  
+- More advanced analysis rules  
+- Optional voice-note debugging mode  
+- Exportable history and reports  
+- More level badges and rewards  
 
 
 
