@@ -1,6 +1,6 @@
 **Code Sensei**
 
-[https://youtu.be/Di1P4Hz05n4](url)
+https://youtu.be/Di1P4Hz05n4
 
 Code Sensei is an Android app that helps beginners understand their Kotlin code more clearly.  
 The user pastes code, taps Analyze, and the app explains what is happening, what might be wrong, and how it can be improved.  
