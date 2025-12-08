@@ -120,14 +120,38 @@ com.example.codesensei
 
 **Screenshots (coming soon)**
 
-- Splash screen  
-- Home screen  
-- Results screen  
-- Detail screen  
-- History  
-- Settings  
-- Dark and light themes  
+Home Screen:
+(Light Mode):
+<img width="292" height="648" alt="1" src="https://github.com/user-attachments/assets/c40b7924-79d7-4fc8-99cb-20ea058789d4" />
 
+ 
+(Dark Mode):
+ 
+<img width="292" height="648" alt="2" src="https://github.com/user-attachments/assets/fefdfb6a-53a3-4fec-a515-890e52f47b6f" />
+
+Results Screen:
+(Light Mode):
+<img width="292" height="648" alt="3" src="https://github.com/user-attachments/assets/bfc64913-a57b-4845-bd51-2a0939515148" />
+ 
+(Dark Mode):
+ <img width="292" height="648" alt="4" src="https://github.com/user-attachments/assets/8eceab76-a5b3-4c05-aa09-9d8f8469364f" />
+
+History Screen:
+(Light Mode):
+ <img width="292" height="648" alt="5" src="https://github.com/user-attachments/assets/4a44054b-0391-4563-9a3e-467adee35300" />
+
+(Dark Mode):
+ <img width="292" height="648" alt="6" src="https://github.com/user-attachments/assets/ff635014-b2b0-45fe-a927-67fb40da96d2" />
+
+Settings Screen
+(Light Mode):
+ <img width="292" height="648" alt="7" src="https://github.com/user-attachments/assets/9381f981-9bd5-4962-bf2f-b9f6f28c95f1" />
+
+(Dark Mode):
+ <img width="292" height="648" alt="8" src="https://github.com/user-attachments/assets/f2fa2682-7ed9-4d11-bdc9-02287c408738" />
+
+Splash Screen:
+<img width="292" height="648" alt="9" src="https://github.com/user-attachments/assets/4a45f7f1-4c7b-4b31-9d0a-cc2dc6a1d240" />
 
 
 **Future Enhancements**
