@@ -11,17 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeSensei">
+
+        <!-- SplashActivity is designated as the entry point of the application. -->
+        <!-- android:exported="true" allows it to be launched by the system's app launcher. -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CodeSensei">
+
+            <!-- The intent-filter specifies that this activity is the main entry point (MAIN) -->
+            <!-- and should appear in the top-level app launcher (LAUNCHER). -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity is a standard activity within the app. -->
+        <!-- android:exported="false" means it can only be launched by components -->
+        <!-- within this app (e.g., from SplashActivity) and not by external applications. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

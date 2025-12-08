@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.CodeSensei" parent="android:Theme.Material.Light.NoActionBar" />
+    <!--
+      Main application theme. This theme is applied to the entire app, specifically to the main
+      activity that hosts Jetpack Compose content.
+
+      It inherits from `Theme.Material.Light.NoActionBar` to provide a clean slate for custom
+      Compose UI, removing the default top action bar.
+    -->
+    <style name="Theme.CodeSensei" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <!-- Sets the status bar to be transparent, allowing Compose to draw behind it for edge-to-edge UIs. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--
+          Sets the default window background. This is used as the initial splash screen while the
+          application and Compose UI are loading, providing a seamless transition.
+        -->
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <!--
+      (Optional) A dedicated theme for a splash screen `Activity`. This can be used if a separate
+      SplashActivity is introduced later, for example, to handle complex initialization logic before
+      the main activity loads.
+    -->
+    <style name="Theme.CodeSensei.Splash" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
 </resources>

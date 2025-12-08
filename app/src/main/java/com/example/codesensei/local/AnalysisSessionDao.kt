@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 /**
  * Data access object (DAO) for reading and writing analysis session history.
  *
- * This interface defines how the app talks to the `analysis_sessions` table
+ * This interface defines how the app interacts with the `analysis_sessions` table
  * in the Room database. Room generates the implementation at compile time.
  */
 @Dao
